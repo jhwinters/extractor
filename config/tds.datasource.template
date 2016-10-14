@@ -1,0 +1,8 @@
+[Schoolbase]
+Driver = FreeTDS
+Description = Accessing SchoolBase's database
+Trace = No
+Server = 172.16.0.47
+Port = 1433
+Database = Schoolbase
+TDS_Version = 8.0

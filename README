@@ -347,6 +347,17 @@ Issues with the iSAMS import process as at Spring 2016
     design of the import templates - like "Official name" in the first
     page of student information.
 
+17) When iSAMS imported our data they had immense problems loading contact
+    information without losing large chunks of it.  Examining the Excel
+    workbooks provided to them one could see that one pupil for instance
+    had contact records for 5 people attached to him.  Once the load had
+    been completed there would be only 2 still attached.
+
+    Similarly, some contact records would be loaded, but in the process
+    would lose all their telephone numbers.  Checking the Excel spreadsheets
+    showed that the telephone numbers were definitely there before the
+    load, but for some reason they were not loaded.
+
 
 
 Reasons why Excel documents are a bad choice as a data transfer mechanism.

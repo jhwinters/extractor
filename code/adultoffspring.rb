@@ -120,12 +120,6 @@ class SB_AdultOffspring
 
   def note_phoneno(phoneno)
     @phonenos << phoneno
-#    if @pupil_ident == 122 || @pupil_ident == 1607
-#      puts "Phone no for #{@pupil_ident == 122 ? "Alex" : "George"}"
-#      puts "Name1: #{@name1}"
-#      puts "Name2: #{@name2}"
-#      puts "Phone no: #{phoneno.phone_number}"
-#    end
   end
 
   def find_phoneno(string)

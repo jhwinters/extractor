@@ -31,22 +31,12 @@ class SB_AsGroups
       if @user_ident == 0 && @year
         #
         #  This would be much better done by using the head-of-year
-        #  field from the years records in SB, but ours are horrendously
+        #  field from the year's records in SB, but ours are horrendously
         #  out of date.
         #
-        if @year.effective_isams_year >= 20
-          @user_ident = 596                     # Rachel Pairman
-        elsif @year.effective_isams_year == 7 ||
-              @year.effective_isams_year == 8
-          @user_ident = 4                       # Adam Jenkins
-        elsif @year.effective_isams_year == 9 ||
-              @year.effective_isams_year == 10 ||
-              @year.effective_isams_year == 11
-          @user_ident = 564                     # Paul Gooding
-        elsif @year.effective_isams_year == 12 ||
-              @year.effective_isams_year == 13
-          @user_ident = 539                     # Nick O'Doherty
-        end
+        #  There was some code here which patched in specific
+        #  members of staff - excised.
+        #
       end
     end
   end

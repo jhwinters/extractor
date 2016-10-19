@@ -37,7 +37,7 @@ class SB_AsComment
     #  Some comments contain an entire Word XML document (how?!)
     #  Drop them.
     #
-    #  Note that this test is entirely safe, since it would cause
+    #  Note that this test is not entirely safe, since it would cause
     #  any comment which contained the string "<xml>" to be dropped,
     #  but it works in our case and hits the two corrupt comments.
     #

@@ -169,23 +169,14 @@ class SchoolBaseTable
     end
   end
 
-  def old_dump
-    get_password unless @@password
-    tf = Tempfile.new("#{@table_name}")
-    tf.puts "select #{columns} from #{@table_name};"
-    tf.close
-#    puts "select #{columns} from #{@table_name};"
-    command = "#{UTILITY} Schoolbase winters #{@@password} -b -d, -q -c <#{tf.path} >#{File.expand_path(@table_name + ".csv", CSV_DIR)}"
-    system command
-  end
-
   def dump
     get_password unless @@password
     csv = CSV.open(File.expand_path(@table_name + ".csv", CSV_DIR), "wb")
     client = TinyTds::Client.new(
-      username: "winters",
+      username: "youruser",             # Adjust
       password: @@password,
-      dataserver: "Schoolbase",
+      host: "127.0.0.1",                # Adjust
+      port: 1433,                       # May need to adjust
       database: "Schoolbase")
     result = client.execute("SELECT #{columns} FROM [#{@table_name}];")
     fields = result.fields
